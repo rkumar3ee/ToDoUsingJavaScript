@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"> ToDo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="searchSubmit btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="clear btn btn-danger ml-2 my-2 my-sm-0">Clear</button>
+          </form>
+        </div>
+      </nav>
+      <h1 class="edit d-none"><input type="text"class="form-control-lg"><i class="btn btn-lg fas fa-check"></i></h1>
+      <h1 class="done"><t class="name">ListName</t><i class="btn btn-lg far fa-edit"></i></h1>
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="edit d-none"><input type="text"><i class="btn btn-lg fas fa-check"></i></div>
+          <div class="done"><t class="name">Demo Work</t> <i class="btn far fa-edit"></i> </div>
+          <span class="btn badge badge-success badge-pill">Completed</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="edit d-none"><input type="text"><i class="btn btn-lg fas fa-check"></i></div>
+          <div class="done"><t class="name">Test</t> <i class="btn far fa-edit"></i> </div>
+          <span class="btn badge badge-success badge-pill">Completed</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="edit d-none"><input type="text"><i class="btn btn-lg fas fa-check"></i></div>
+          <div class="done"><t class="name">Programming</t> <i class="btn far fa-edit"></i> </div>
+          <span class="btn badge badge-success badge-pill">Completed</span>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 ">
+        <div class="d-none onadd " >
+            <input type="text" id="newItem" class="form-control mr-2 mb-2 ml-2" >
+            <button type="submit" class="submit btn btn-outline-primary mb-2 mr-2">Submit</button>
+            <button type="calcel" class="calcel btn btn-outline-secondary mb-2 mr-2">Cancel</button>
+        </div>
+        <div class="buttons">
+            <button type="submit" class="add  btn btn-outline-success mb-2 ml-2 mr-2"><i class="fas fa-pencil-alt"></i> Add</button>
+            <button type="submit" class="delete btn btn-outline-danger mb-2 mr-2"><i class="fas fa-trash-alt"></i> Delete</button>
+        </div>
+      </form>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
