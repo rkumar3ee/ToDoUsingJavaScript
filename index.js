@@ -1,5 +1,6 @@
 const badgesAndEdit = document.querySelector(".list-group");
 badgesAndEdit.addEventListener('click',function(evt){
+    evt.preventDefault();
     if(evt.target.innerHTML==="Completed"){
         evt.target.innerHTML="Due";
         evt.target.classList.remove('badge-success');
@@ -29,18 +30,21 @@ badgesAndEdit.addEventListener('click',function(evt){
 
 const add = document.querySelector(".add");
 add.addEventListener('click',function(evt){
+    evt.preventDefault();
     document.querySelector(".buttons").classList.add('d-none');
     document.querySelector(".onadd").classList.remove('d-none');
 })
 
 const cancel = document.querySelector(".calcel");
 cancel.addEventListener('click',function(evt){
+    evt.preventDefault();
     document.querySelector(".buttons").classList.remove('d-none');
     document.querySelector(".onadd").classList.add('d-none');  
 })
 
 const submit = document.querySelector(".submit");
 submit.addEventListener('click',function(){
+    evt.preventDefault();
     const newItem = document.querySelector("#newItem");
     const newListItem = document.createElement("li");
     newListItem.classList="list-group-item d-flex justify-content-between align-items-center";
@@ -57,11 +61,13 @@ const editEvent = document.querySelector(".fa-edit");
 const checkEvent = document.querySelector(".fa-check");
 const editValue = done.innerText;
 editEvent.addEventListener("click",function(){
+    evt.preventDefault();
     edit.classList.toggle("d-none");
     edit.querySelector("input").value=editValue;
     done.classList.toggle("d-none");
     })
 checkEvent.addEventListener("click",function(){
+    evt.preventDefault();
     edit.classList.toggle("d-none");
     done.querySelector(".name").textContent=edit.querySelector("input").value;
     done.classList.toggle("d-none");
@@ -69,6 +75,7 @@ checkEvent.addEventListener("click",function(){
 
 const removeCompleted = document.querySelector(".delete");
 removeCompleted.addEventListener("click",function(evt){
+    evt.preventDefault();
     const lis = document.querySelectorAll(".list-group-item");
     //console.log(lis);
     for(let i=0;i<lis.length;i++){
@@ -81,6 +88,7 @@ removeCompleted.addEventListener("click",function(evt){
 
 const searchSubmit = document.querySelector(".searchSubmit");
 searchSubmit.addEventListener("click",function(evt){
+    evt.preventDefault();
     const lis = document.querySelectorAll(".list-group-item");
     const searchValue = document.querySelector(".search").value.trim();
     for(let i =0;i<lis.length;i++){
@@ -101,6 +109,7 @@ searchSubmit.addEventListener("click",function(evt){
 })
 const clear = document.querySelector(".clear");
 clear.addEventListener("click",function(){
+    evt.preventDefault();
     const lis = document.querySelectorAll(".list-group-item");
     for(let i = 0;i<lis.length;i++){
         const li=lis[i];
