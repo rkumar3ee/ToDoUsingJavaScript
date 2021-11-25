@@ -43,7 +43,7 @@ cancel.addEventListener('click',function(evt){
 })
 
 const submit = document.querySelector(".submit");
-submit.addEventListener('click',function(){
+submit.addEventListener('click',function(evt){
     evt.preventDefault();
     const newItem = document.querySelector("#newItem");
     const newListItem = document.createElement("li");
@@ -54,19 +54,20 @@ submit.addEventListener('click',function(){
     document.querySelector(".list-group").append(newListItem);
     document.querySelector(".buttons").classList.remove('d-none');
     document.querySelector(".onadd").classList.add('d-none');
+    evt.preventDefault();
 })
 const edit = document.querySelector(".edit");
 const done = document.querySelector(".done");
 const editEvent = document.querySelector(".fa-edit");
 const checkEvent = document.querySelector(".fa-check");
 const editValue = done.innerText;
-editEvent.addEventListener("click",function(){
+editEvent.addEventListener("click",function(evt){
     evt.preventDefault();
     edit.classList.toggle("d-none");
     edit.querySelector("input").value=editValue;
     done.classList.toggle("d-none");
     })
-checkEvent.addEventListener("click",function(){
+checkEvent.addEventListener("click",function(evt){
     evt.preventDefault();
     edit.classList.toggle("d-none");
     done.querySelector(".name").textContent=edit.querySelector("input").value;
@@ -108,7 +109,7 @@ searchSubmit.addEventListener("click",function(evt){
     }
 })
 const clear = document.querySelector(".clear");
-clear.addEventListener("click",function(){
+clear.addEventListener("click",function(evt){
     evt.preventDefault();
     const lis = document.querySelectorAll(".list-group-item");
     for(let i = 0;i<lis.length;i++){
